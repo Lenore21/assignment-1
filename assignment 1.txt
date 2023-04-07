@@ -1,0 +1,77 @@
+ #include <stdio.h>
+#include <math.h>
+
+// Function to add two numbers
+double add(double num1, double num2) {
+    return num1 + num2;
+}
+
+// Function to subtract two numbers
+double subtract(double num1, double num2) {
+    return num1 - num2;
+}
+
+// Function to multiply two numbers
+double multiply(double num1, double num2) {
+    return num1 * num2;
+}
+
+// Function to divide two numbers
+double divide(double num1, double num2) {
+    return num1 / num2;
+}
+
+// Function to find square root of a number
+double square_root(double num) {
+    return sqrt(num);
+}
+
+// Function to find power of a number
+double power(double num, double m) {
+    return pow(num, m);
+}
+
+int main() {
+    double num1, num2, result;
+    int choice;
+
+    printf("Enter two numbers: ");
+    scanf("%lf %lf", &num1, &num2);
+
+    printf("Enter the operation to perform:\n");
+    printf("1. Add\n2. Subtract\n3. Multiply\n4. Divide\n5. Square root\n6. Power\n");
+    scanf("%d", &choice);
+
+    switch(choice) {
+        case 1:
+            result = add(num1, num2);
+            printf("Result: %lf", result);
+            break;
+        case 2:
+            result = subtract(num1, num2);
+            printf("Result: %lf", result);
+            break;
+        case 3:
+            result = multiply(num1, num2);
+            printf("Result: %lf", result);
+            break;
+        case 4:
+            result = divide(num1, num2);
+            printf("Result: %lf", result);
+            break;
+        case 5:
+            result = square_root(num1);
+            printf("Square root of %lf is %lf", num1, result);
+            break;
+        case 6:
+            result = power(num1, num2);
+            printf("%lf raised to %lf is %lf", num1, num2, result);
+            break;
+        default:
+            printf("Invalid operation");
+            break;
+    }
+
+    return 0;
+}
+
