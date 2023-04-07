@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+   float base, height, side1, side2, side3;
+   float area, perimeter;
+
+   printf("Enter the base of the triangle: ");
+   scanf("%f", &base);
+   printf("Enter the height of the triangle: ");
+   scanf("%f", &height);
+   printf("Enter the length of side 1: ");
+   scanf("%f", &side1);
+   printf("Enter the length of side 2: ");
+   scanf("%f", &side2);
+   printf("Enter the length of side 3: ");
+   scanf("%f", &side3);
+
+   perimeter = side1 + side2 + side3;
+   float s = perimeter / 2;
+   area = sqrt(s * (s - side1) * (s - side2) * (s - side3));
+
+   printf("Perimeter of the triangle = %.2f units\n", perimeter);
+   printf("Area of the triangle = %.2f square units\n", area);
+
+   return 0;
+}
